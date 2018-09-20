@@ -94,16 +94,17 @@
 
 
 
-<meta name="description" content="假装自己会运维">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zhenping&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="registry删除镜像方法docker-distribution主配置文件:123456789101112131415161718192021config.yml:	version: 0.1	log:	  fields:	    service: registry	storage:	    delete:	        enabled: true  #需要开启存储删除功能，才能使用接口删除镜像">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker registry删除镜像方法">
+<meta property="og:url" content="http://yoursite.com/2018/09/20/docker/index.html">
 <meta property="og:site_name" content="Zhenping&#39;s Blog">
-<meta property="og:description" content="假装自己会运维">
+<meta property="og:description" content="registry删除镜像方法docker-distribution主配置文件:123456789101112131415161718192021config.yml:	version: 0.1	log:	  fields:	    service: registry	storage:	    delete:	        enabled: true  #需要开启存储删除功能，才能使用接口删除镜像">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-09-20T02:37:02.903Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zhenping&#39;s Blog">
-<meta name="twitter:description" content="假装自己会运维">
+<meta name="twitter:title" content="Docker registry删除镜像方法">
+<meta name="twitter:description" content="registry删除镜像方法docker-distribution主配置文件:123456789101112131415161718192021config.yml:	version: 0.1	log:	  fields:	    service: registry	storage:	    delete:	        enabled: true  #需要开启存储删除功能，才能使用接口删除镜像">
 
 
 
@@ -132,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/20/docker/"/>
 
 
 
 
 
-  <title>Zhenping's Blog</title>
+  <title>Docker registry删除镜像方法 | Zhenping's Blog</title>
   
 
 
@@ -163,9 +164,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -302,9 +301,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -334,9 +333,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/20/docker/" itemprop="url">Docker registry删除镜像方法</a></h1>
+          <h1 class="post-title" itemprop="name headline">Docker registry删除镜像方法</h1>
         
 
         <div class="post-meta">
@@ -408,9 +405,7 @@
       
 
       
-        
-          
-            <h1 id="registry删除镜像方法"><a href="#registry删除镜像方法" class="headerlink" title="registry删除镜像方法"></a>registry删除镜像方法</h1><h2 id="docker-distribution主配置文件"><a href="#docker-distribution主配置文件" class="headerlink" title="docker-distribution主配置文件:"></a>docker-distribution主配置文件:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">config.yml:</span><br><span class="line">	version: 0.1</span><br><span class="line">	log:</span><br><span class="line">	  fields:</span><br><span class="line">	    service: registry</span><br><span class="line">	storage:</span><br><span class="line">	    delete:</span><br><span class="line">	        enabled: true  #需要开启存储删除功能，才能使用接口删除镜像。</span><br><span class="line">	    cache:</span><br><span class="line">	        blobdescriptor: inmemory</span><br><span class="line">	    filesystem:</span><br><span class="line">	        rootdirectory: /var/lib/registry</span><br><span class="line">	http:</span><br><span class="line">	    addr: :5000</span><br><span class="line">	    headers:</span><br><span class="line">	        X-Content-Type-Options: [nosniff]</span><br><span class="line">	health:</span><br><span class="line">	  storagedriver:</span><br><span class="line">	    enabled: true</span><br><span class="line">	    interval: 10s</span><br><span class="line">    	threshold: 3</span><br></pre></td></tr></table></figure>
+        <h1 id="registry删除镜像方法"><a href="#registry删除镜像方法" class="headerlink" title="registry删除镜像方法"></a>registry删除镜像方法</h1><h2 id="docker-distribution主配置文件"><a href="#docker-distribution主配置文件" class="headerlink" title="docker-distribution主配置文件:"></a>docker-distribution主配置文件:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">config.yml:</span><br><span class="line">	version: 0.1</span><br><span class="line">	log:</span><br><span class="line">	  fields:</span><br><span class="line">	    service: registry</span><br><span class="line">	storage:</span><br><span class="line">	    delete:</span><br><span class="line">	        enabled: true  #需要开启存储删除功能，才能使用接口删除镜像。</span><br><span class="line">	    cache:</span><br><span class="line">	        blobdescriptor: inmemory</span><br><span class="line">	    filesystem:</span><br><span class="line">	        rootdirectory: /var/lib/registry</span><br><span class="line">	http:</span><br><span class="line">	    addr: :5000</span><br><span class="line">	    headers:</span><br><span class="line">	        X-Content-Type-Options: [nosniff]</span><br><span class="line">	health:</span><br><span class="line">	  storagedriver:</span><br><span class="line">	    enabled: true</span><br><span class="line">	    interval: 10s</span><br><span class="line">    	threshold: 3</span><br></pre></td></tr></table></figure>
 <h2 id="删除Image的步骤"><a href="#删除Image的步骤" class="headerlink" title="删除Image的步骤"></a>删除Image的步骤</h2><ul>
 <li><p>1、获取Etag字段中的sha256的字段</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">curl -i  -X GET --header &quot;Accept: application/vnd.docker.distribution.manifest.v2+json&quot; http://localhost:5000/v2/镜像名称/manifests/标签</span><br><span class="line"></span><br><span class="line">	HTTP/1.1 200 OK</span><br><span class="line">	Content-Length: 3047</span><br><span class="line">	Content-Type: application/vnd.docker.distribution.manifest.v2+json</span><br><span class="line">	Docker-Content-Digest: sha256:4111f52442b430fa1c758156cb20dd7884dbde3fcbc969f166850d9f6da06035</span><br><span class="line">	Docker-Distribution-Api-Version: registry/2.0</span><br><span class="line">	Etag: &quot;sha256:4111f52442b430fa1c758156cb20dd7884dbde3fcbc969f166850d9f6da06035&quot;   #获取Etag字段的VaLue,sha256:xxx字段。</span><br><span class="line">	X-Content-Type-Options: nosniff</span><br><span class="line">	Date: Wed, 11 Apr 2018 05:51:24 GMT</span><br></pre></td></tr></table></figure>
@@ -426,8 +421,6 @@
 </li>
 </ul>
 
-          
-        
       
     </div>
     
@@ -444,153 +437,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/19/kubernetes/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhenping">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zhenping's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/19/kubernetes/" itemprop="url">kubernetes</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-19T21:40:44+08:00">
-                2018-09-19
-              </time>
+              <a href="/2018/09/19/kubernetes/" rel="next" title="kubernetes">
+                <i class="fa fa-chevron-left"></i> kubernetes
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Kubernetes/" itemprop="url" rel="index">
-                    <span itemprop="name">Kubernetes</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -600,10 +468,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -611,6 +480,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -631,8 +504,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -685,6 +567,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#registry删除镜像方法"><span class="nav-number">1.</span> <span class="nav-text">registry删除镜像方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#docker-distribution主配置文件"><span class="nav-number">1.1.</span> <span class="nav-text">docker-distribution主配置文件:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除Image的步骤"><span class="nav-number">1.2.</span> <span class="nav-text">删除Image的步骤</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -800,10 +698,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
